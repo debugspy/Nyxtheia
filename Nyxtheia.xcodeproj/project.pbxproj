@@ -10,7 +10,26 @@
 		C46FBB661D814FF800C2AD87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FBB651D814FF800C2AD87 /* AppDelegate.swift */; };
 		C46FBB681D814FF800C2AD87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46FBB671D814FF800C2AD87 /* Assets.xcassets */; };
 		C46FBB6B1D814FF800C2AD87 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46FBB691D814FF800C2AD87 /* MainMenu.xib */; };
+		C46FBB731D8160E200C2AD87 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FBB721D8160E200C2AD87 /* StatusMenuController.swift */; };
+		C46FBB791D816C9F00C2AD87 /* LIFXHTTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46FBB771D816C9F00C2AD87 /* LIFXHTTPKit.framework */; };
+		C46FBB7E1D81720900C2AD87 /* LIFXHTTPKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C46FBB7D1D81720900C2AD87 /* LIFXHTTPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C46FBB811D817EBC00C2AD87 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FBB7F1D817EBC00C2AD87 /* PreferencesWindow.swift */; };
+		C46FBB821D817EBC00C2AD87 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46FBB801D817EBC00C2AD87 /* PreferencesWindow.xib */; };
+		C46FBB841D81D1AA00C2AD87 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FBB831D81D1AA00C2AD87 /* SliderView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C46FBB7C1D8171D700C2AD87 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C46FBB7E1D81720900C2AD87 /* LIFXHTTPKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C46FBB621D814FF800C2AD87 /* Nyxtheia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nyxtheia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,6 +37,12 @@
 		C46FBB671D814FF800C2AD87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C46FBB6A1D814FF800C2AD87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C46FBB6C1D814FF800C2AD87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C46FBB721D8160E200C2AD87 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		C46FBB771D816C9F00C2AD87 /* LIFXHTTPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LIFXHTTPKit.framework; path = Carthage/Build/Mac/LIFXHTTPKit.framework; sourceTree = "<group>"; };
+		C46FBB7D1D81720900C2AD87 /* LIFXHTTPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LIFXHTTPKit.framework; path = Carthage/Build/Mac/LIFXHTTPKit.framework; sourceTree = "<group>"; };
+		C46FBB7F1D817EBC00C2AD87 /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
+		C46FBB801D817EBC00C2AD87 /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
+		C46FBB831D81D1AA00C2AD87 /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46FBB791D816C9F00C2AD87 /* LIFXHTTPKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +60,8 @@
 		C46FBB591D814FF700C2AD87 = {
 			isa = PBXGroup;
 			children = (
+				C46FBB7D1D81720900C2AD87 /* LIFXHTTPKit.framework */,
+				C46FBB771D816C9F00C2AD87 /* LIFXHTTPKit.framework */,
 				C46FBB641D814FF800C2AD87 /* Nyxtheia */,
 				C46FBB631D814FF800C2AD87 /* Products */,
 			);
@@ -51,8 +79,12 @@
 			isa = PBXGroup;
 			children = (
 				C46FBB651D814FF800C2AD87 /* AppDelegate.swift */,
+				C46FBB721D8160E200C2AD87 /* StatusMenuController.swift */,
 				C46FBB671D814FF800C2AD87 /* Assets.xcassets */,
 				C46FBB691D814FF800C2AD87 /* MainMenu.xib */,
+				C46FBB831D81D1AA00C2AD87 /* SliderView.swift */,
+				C46FBB7F1D817EBC00C2AD87 /* PreferencesWindow.swift */,
+				C46FBB801D817EBC00C2AD87 /* PreferencesWindow.xib */,
 				C46FBB6C1D814FF800C2AD87 /* Info.plist */,
 			);
 			path = Nyxtheia;
@@ -68,6 +100,8 @@
 				C46FBB5E1D814FF800C2AD87 /* Sources */,
 				C46FBB5F1D814FF800C2AD87 /* Frameworks */,
 				C46FBB601D814FF800C2AD87 /* Resources */,
+				C46FBB7B1D81718A00C2AD87 /* ShellScript */,
+				C46FBB7C1D8171D700C2AD87 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -117,17 +151,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46FBB681D814FF800C2AD87 /* Assets.xcassets in Resources */,
+				C46FBB821D817EBC00C2AD87 /* PreferencesWindow.xib in Resources */,
 				C46FBB6B1D814FF800C2AD87 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C46FBB7B1D81718A00C2AD87 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/LIFXHTTPKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C46FBB5E1D814FF800C2AD87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46FBB731D8160E200C2AD87 /* StatusMenuController.swift in Sources */,
+				C46FBB841D81D1AA00C2AD87 /* SliderView.swift in Sources */,
+				C46FBB811D817EBC00C2AD87 /* PreferencesWindow.swift in Sources */,
 				C46FBB661D814FF800C2AD87 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +288,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Nyxtheia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jacques.Helios.Nyxtheia;
@@ -245,6 +304,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Nyxtheia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jacques.Helios.Nyxtheia;
