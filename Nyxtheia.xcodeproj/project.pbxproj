@@ -11,7 +11,6 @@
 		C46FBB681D814FF800C2AD87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46FBB671D814FF800C2AD87 /* Assets.xcassets */; };
 		C46FBB6B1D814FF800C2AD87 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46FBB691D814FF800C2AD87 /* MainMenu.xib */; };
 		C46FBB731D8160E200C2AD87 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FBB721D8160E200C2AD87 /* StatusMenuController.swift */; };
-		C46FBB791D816C9F00C2AD87 /* LIFXHTTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46FBB771D816C9F00C2AD87 /* LIFXHTTPKit.framework */; };
 		C46FBB7E1D81720900C2AD87 /* LIFXHTTPKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C46FBB7D1D81720900C2AD87 /* LIFXHTTPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C46FBB811D817EBC00C2AD87 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FBB7F1D817EBC00C2AD87 /* PreferencesWindow.swift */; };
 		C46FBB821D817EBC00C2AD87 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46FBB801D817EBC00C2AD87 /* PreferencesWindow.xib */; };
@@ -38,7 +37,6 @@
 		C46FBB6A1D814FF800C2AD87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C46FBB6C1D814FF800C2AD87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C46FBB721D8160E200C2AD87 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
-		C46FBB771D816C9F00C2AD87 /* LIFXHTTPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LIFXHTTPKit.framework; path = Carthage/Build/Mac/LIFXHTTPKit.framework; sourceTree = "<group>"; };
 		C46FBB7D1D81720900C2AD87 /* LIFXHTTPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LIFXHTTPKit.framework; path = Carthage/Build/Mac/LIFXHTTPKit.framework; sourceTree = "<group>"; };
 		C46FBB7F1D817EBC00C2AD87 /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
 		C46FBB801D817EBC00C2AD87 /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
@@ -50,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C46FBB791D816C9F00C2AD87 /* LIFXHTTPKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				C46FBB7D1D81720900C2AD87 /* LIFXHTTPKit.framework */,
-				C46FBB771D816C9F00C2AD87 /* LIFXHTTPKit.framework */,
 				C46FBB641D814FF800C2AD87 /* Nyxtheia */,
 				C46FBB631D814FF800C2AD87 /* Products */,
 			);
@@ -170,8 +166,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = "/usr/local/bin/carthage copy-frameworks";
-			shellScript = "";
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
