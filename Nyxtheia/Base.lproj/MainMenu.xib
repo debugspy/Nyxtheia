@@ -18,16 +18,59 @@
             <connections>
                 <outlet property="sliderView" destination="AGx-dt-qOs" id="qtj-Vm-yOh"/>
                 <outlet property="statusMenu" destination="7Wz-ar-sPU" id="4Pi-Je-kdf"/>
-                <outlet property="toggleMenuItem" destination="kDJ-rc-qvg" id="WCG-Un-C8O"/>
+                <outlet property="toggleMenuItem" destination="jMQ-dh-Rcl" id="qKf-Jc-1Zi"/>
             </connections>
         </customObject>
         <menu id="7Wz-ar-sPU">
             <items>
-                <menuItem title="Turn Off" id="kDJ-rc-qvg" userLabel="Toggle">
+                <menuItem title="Turn Off" id="jMQ-dh-Rcl">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="toggleSwitch:" target="NzV-ef-CcW" id="C9C-5I-rMg"/>
-                    </connections>
+                    <menu key="submenu" title="Turn Off" id="LIc-RU-NMF">
+                        <items>
+                            <menuItem title="Now" id="mWg-PY-ojn">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="toggleLightNow:" target="NzV-ef-CcW" id="0Vm-Yc-rFB"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="30 seconds" id="DjU-C2-5RS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="toggleLight30sec:" target="NzV-ef-CcW" id="fRA-v1-fu5"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="1 minute" id="kkm-wk-oEo">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="toggleLight1min:" target="NzV-ef-CcW" id="YPa-Am-LAC"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="2 minutes" id="kdX-Dh-N2z">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="toggleLight2min:" target="NzV-ef-CcW" id="Z16-yF-yUh"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="5 minutes" id="bti-uj-pCm">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="toggleLight5min:" target="NzV-ef-CcW" id="Pwc-BA-a8S"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="10 minutes" id="zUs-oU-Vii">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="toggleLight10min:" target="NzV-ef-CcW" id="2Zk-Rh-sIv"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="30 minutes" id="4JG-5j-vBD">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="toggleLight30min:" target="NzV-ef-CcW" id="Os4-BV-axi"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="NUc-xI-lRS"/>
                 <menuItem title="Slider" id="BxY-Em-gN3">
@@ -105,7 +148,7 @@
                 <outlet property="colorSlide" destination="aP2-n7-bES" id="XbM-gw-qML"/>
                 <outlet property="kelvinSlide" destination="PQg-d3-C0W" id="ynn-0P-S2i"/>
             </connections>
-            <point key="canvasLocation" x="283.5" y="387"/>
+            <point key="canvasLocation" x="142.5" y="536"/>
         </customView>
     </objects>
 </document>
