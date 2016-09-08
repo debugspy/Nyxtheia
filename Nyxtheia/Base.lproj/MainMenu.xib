@@ -51,49 +51,49 @@
             <point key="canvasLocation" x="195.5" y="246.5"/>
         </menu>
         <customView id="AGx-dt-qOs" customClass="SliderView" customModule="Nyxtheia" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="291" height="84"/>
+            <rect key="frame" x="0.0" y="0.0" width="307" height="74"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Vh-pl-dRH">
-                    <rect key="frame" x="10" y="59" width="65" height="17"/>
+                    <rect key="frame" x="20" y="55" width="65" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Colour" id="709-J6-uua">
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="systemLight" size="15"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OiN-DF-Mok">
-                    <rect key="frame" x="10" y="34" width="69" height="17"/>
+                    <rect key="frame" x="20" y="30" width="73" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Brightness" id="PzP-4l-Eg1">
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="systemLight" size="14"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mWt-cO-a1a">
-                    <rect key="frame" x="10" y="9" width="65" height="17"/>
+                    <rect key="frame" x="20" y="5" width="65" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Kelvin" id="SfN-Lc-TMZ">
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="systemLight" size="14"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aP2-n7-bES">
-                    <rect key="frame" x="86" y="57" width="195" height="21"/>
+                    <rect key="frame" x="97" y="53" width="195" height="21"/>
                     <sliderCell key="cell" state="on" alignment="left" maxValue="360" doubleValue="180" tickMarkPosition="above" sliderType="linear" id="HI2-fS-YwZ"/>
                     <connections>
                         <action selector="updateColorSlide:" target="NzV-ef-CcW" id="ZGU-Ea-JR0"/>
                     </connections>
                 </slider>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WaU-QG-xYM">
-                    <rect key="frame" x="86" y="32" width="195" height="21"/>
+                    <rect key="frame" x="97" y="28" width="195" height="21"/>
                     <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="hn6-44-eog"/>
                     <connections>
                         <action selector="updateBrightnessSlide:" target="NzV-ef-CcW" id="3bm-rO-hCY"/>
                     </connections>
                 </slider>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PQg-d3-C0W">
-                    <rect key="frame" x="86" y="7" width="195" height="21"/>
+                    <rect key="frame" x="97" y="3" width="195" height="21"/>
                     <sliderCell key="cell" state="on" alignment="left" minValue="2500" maxValue="9000" doubleValue="5750" tickMarkPosition="above" sliderType="linear" id="N0h-OC-A5F"/>
                     <connections>
                         <action selector="updateKelvinSlide:" target="NzV-ef-CcW" id="X1h-Wa-Y3c"/>
@@ -105,7 +105,7 @@
                 <outlet property="colorSlide" destination="aP2-n7-bES" id="XbM-gw-qML"/>
                 <outlet property="kelvinSlide" destination="PQg-d3-C0W" id="ynn-0P-S2i"/>
             </connections>
-            <point key="canvasLocation" x="172.5" y="463"/>
+            <point key="canvasLocation" x="283.5" y="387"/>
         </customView>
     </objects>
 </document>
