@@ -43,4 +43,9 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         
         delegate?.preferencesDidUpdate()
     }
+    
+    // User Feedback dictates that confirmation helps with access token
+    @IBAction func confirmButton(sender: NSButton) {
+        self.close()
+    }
 }

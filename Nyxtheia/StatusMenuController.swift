@@ -108,8 +108,17 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     
     // These three functions are fairly straight forward
     @IBAction func updateColorSlide(sender: NSSlider) {
-        let colour = Color.color(round(sender.doubleValue), saturation: 1.0)
         let all = client.allLightTarget()
+        let colour = Color.color(round(sender.doubleValue), saturation: all.color.saturation)
+        
+        all.setColor(colour)
+    }
+    
+    @IBAction func updateSaturationSlide(sender: NSSlider) {
+        let all = client.allLightTarget()
+        let saturation: Double = sender.doubleValue / 100
+        
+        let colour = Color.color(all.color.hue, saturation: saturation)
         all.setColor(colour)
     }
     
@@ -120,6 +129,8 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         
         let all = client.allLightTarget()
         all.setBrightness(brightness)
+        
+        print(all.color.hue)
     }
     
     @IBAction func updateKelvinSlide(sender: NSSlider) {
