@@ -11,11 +11,14 @@ import LIFXHTTPKit
 
 // There's probably a better solution than having this be global
 let DEFAULT_TOKEN = ""
+var currentColour = 180.0
 
 class StatusMenuController: NSObject, PreferencesWindowDelegate {
     @IBOutlet weak var statusMenu: NSMenu!
     @IBOutlet weak var toggleMenuItem: NSMenuItem!
     @IBOutlet weak var sliderView: SliderView!
+    @IBOutlet weak var saturationSlider: NSSlider!
+    
     var sliderMenuItem: NSMenuItem!
     
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
@@ -41,35 +44,19 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     }
     
     // These functions are variations on turning our bulb/s on or off
-    @IBAction func toggleLightNow(sender: NSMenuItem) {
-        toggleLightWithDuration(0.5)
-    }
-    @IBAction func toggleLight30sec(sender: NSMenuItem) {
-        toggleLightWithDuration(30.0)
-    }
-    @IBAction func toggleLight1min(sender: NSMenuItem) {
-        toggleLightWithDuration(60.0)
-    }
-    @IBAction func toggleLight2min(sender: NSMenuItem) {
-        toggleLightWithDuration(120.0)
-    }
-    @IBAction func toggleLight5min(sender: NSMenuItem) {
-        toggleLightWithDuration(300.0)
-    }
-    @IBAction func toggleLight10min(sender: NSMenuItem) {
-        toggleLightWithDuration(600.0)
-    }
-    @IBAction func toggleLight30min(sender: NSMenuItem) {
-        toggleLightWithDuration(1800.0)
-    }
+    @IBAction func toggleLightNow(sender: NSMenuItem) { toggleLightWithDuration(0.5) }
+    @IBAction func toggleLight30sec(sender: NSMenuItem) { toggleLightWithDuration(30.0) }
+    @IBAction func toggleLight1min(sender: NSMenuItem) { toggleLightWithDuration(60.0) }
+    @IBAction func toggleLight2min(sender: NSMenuItem) { toggleLightWithDuration(120.0) }
+    @IBAction func toggleLight5min(sender: NSMenuItem) { toggleLightWithDuration(300.0) }
+    @IBAction func toggleLight10min(sender: NSMenuItem) { toggleLightWithDuration(600.0) }
+    @IBAction func toggleLight30min(sender: NSMenuItem) { toggleLightWithDuration(1800.0) }
     
     // Check the status of the bulb, then switch it on or off with a specified duration
     func toggleLightWithDuration(duration: Float) {
         print("trying toggle switch")
         
         let all = client.allLightTarget()
-        
-        print(all.power)
         
         if all.power == false {
             print("Turn all lights on")
@@ -109,9 +96,11 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     // These three functions are fairly straight forward
     @IBAction func updateColorSlide(sender: NSSlider) {
         let all = client.allLightTarget()
-        let colour = Color.color(round(sender.doubleValue), saturation: all.color.saturation)
+        let colour = Color.color(sender.doubleValue, saturation: all.color.saturation)
         
         all.setColor(colour)
+        currentColour = sender.doubleValue
+        saturationSlider.setNeedsDisplay()
     }
     
     @IBAction func updateSaturationSlide(sender: NSSlider) {
@@ -129,8 +118,6 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         
         let all = client.allLightTarget()
         all.setBrightness(brightness)
-        
-        print(all.color.hue)
     }
     
     @IBAction func updateKelvinSlide(sender: NSSlider) {

@@ -16,6 +16,7 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="NzV-ef-CcW" customClass="StatusMenuController" customModule="Nyxtheia" customModuleProvider="target">
             <connections>
+                <outlet property="saturationSlider" destination="Xwd-Fp-wco" id="tNw-GA-Xl0"/>
                 <outlet property="sliderView" destination="AGx-dt-qOs" id="qtj-Vm-yOh"/>
                 <outlet property="statusMenu" destination="7Wz-ar-sPU" id="4Pi-Je-kdf"/>
                 <outlet property="toggleMenuItem" destination="jMQ-dh-Rcl" id="qKf-Jc-1Zi"/>
@@ -124,14 +125,14 @@
                                     </textField>
                                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aP2-n7-bES">
                                         <rect key="frame" x="94" y="32" width="195" height="21"/>
-                                        <sliderCell key="cell" state="on" alignment="left" maxValue="360" doubleValue="180" tickMarkPosition="above" sliderType="linear" id="HI2-fS-YwZ"/>
+                                        <sliderCell key="cell" state="on" alignment="left" maxValue="360" doubleValue="180" tickMarkPosition="above" sliderType="linear" id="HI2-fS-YwZ" customClass="hueSlide" customModule="Nyxtheia" customModuleProvider="target"/>
                                         <connections>
                                             <action selector="updateColorSlide:" target="NzV-ef-CcW" id="ZGU-Ea-JR0"/>
                                         </connections>
                                     </slider>
                                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xwd-Fp-wco">
                                         <rect key="frame" x="94" y="4" width="195" height="21"/>
-                                        <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="pMo-MX-RU2"/>
+                                        <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="pMo-MX-RU2" customClass="saturationSlide" customModule="Nyxtheia" customModuleProvider="target"/>
                                         <connections>
                                             <action selector="updateSaturationSlide:" target="NzV-ef-CcW" id="kzy-OQ-DWv"/>
                                         </connections>
@@ -145,7 +146,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mWt-cO-a1a">
-                                        <rect key="frame" x="17" y="24" width="65" height="19"/>
+                                        <rect key="frame" x="16" y="24" width="65" height="19"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Kelvin" id="SfN-Lc-TMZ">
                                             <font key="font" metaFont="systemLight" size="14"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -154,7 +155,7 @@
                                     </textField>
                                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PQg-d3-C0W">
                                         <rect key="frame" x="94" y="24" width="195" height="21"/>
-                                        <sliderCell key="cell" state="on" alignment="left" minValue="2500" maxValue="9000" doubleValue="5750" tickMarkPosition="above" sliderType="linear" id="N0h-OC-A5F"/>
+                                        <sliderCell key="cell" state="on" alignment="left" minValue="2500" maxValue="9000" doubleValue="5750" tickMarkPosition="above" sliderType="linear" id="N0h-OC-A5F" customClass="kelvinSlide" customModule="Nyxtheia" customModuleProvider="target"/>
                                         <connections>
                                             <action selector="updateKelvinSlide:" target="NzV-ef-CcW" id="X1h-Wa-Y3c"/>
                                         </connections>
@@ -174,7 +175,7 @@
                 </textField>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WaU-QG-xYM">
                     <rect key="frame" x="97" y="7" width="195" height="21"/>
-                    <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="hn6-44-eog"/>
+                    <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="hn6-44-eog" customClass="brightnessSlide" customModule="Nyxtheia" customModuleProvider="target"/>
                     <connections>
                         <action selector="updateBrightnessSlide:" target="NzV-ef-CcW" id="3bm-rO-hCY"/>
                     </connections>

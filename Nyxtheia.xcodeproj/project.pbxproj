@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C402AC171D840AAC002F41C7 /* customSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402AC161D840AAC002F41C7 /* customSlide.swift */; };
 		C46FBB661D814FF800C2AD87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FBB651D814FF800C2AD87 /* AppDelegate.swift */; };
 		C46FBB681D814FF800C2AD87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46FBB671D814FF800C2AD87 /* Assets.xcassets */; };
 		C46FBB6B1D814FF800C2AD87 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46FBB691D814FF800C2AD87 /* MainMenu.xib */; };
@@ -31,6 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C402AC161D840AAC002F41C7 /* customSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customSlide.swift; sourceTree = "<group>"; };
 		C46FBB621D814FF800C2AD87 /* Nyxtheia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nyxtheia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46FBB651D814FF800C2AD87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C46FBB671D814FF800C2AD87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				C46FBB671D814FF800C2AD87 /* Assets.xcassets */,
 				C46FBB691D814FF800C2AD87 /* MainMenu.xib */,
 				C46FBB831D81D1AA00C2AD87 /* SliderView.swift */,
+				C402AC161D840AAC002F41C7 /* customSlide.swift */,
 				C46FBB7F1D817EBC00C2AD87 /* PreferencesWindow.swift */,
 				C46FBB801D817EBC00C2AD87 /* PreferencesWindow.xib */,
 				C46FBB6C1D814FF800C2AD87 /* Info.plist */,
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C402AC171D840AAC002F41C7 /* customSlide.swift in Sources */,
 				C46FBB731D8160E200C2AD87 /* StatusMenuController.swift in Sources */,
 				C46FBB841D81D1AA00C2AD87 /* SliderView.swift in Sources */,
 				C46FBB811D817EBC00C2AD87 /* PreferencesWindow.swift in Sources */,
@@ -330,6 +334,7 @@
 				C46FBB711D814FF800C2AD87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

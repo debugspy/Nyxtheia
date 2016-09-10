@@ -13,3 +13,5 @@ class SliderView: NSView {
     @IBOutlet weak var brightnessSlide: NSSlider!
     @IBOutlet weak var kelvinSlide: NSSlider!
 }
+
+
