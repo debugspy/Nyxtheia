@@ -103,7 +103,7 @@
                     <font key="font" metaFont="system"/>
                     <tabViewItems>
                         <tabViewItem label="Colours" identifier="1" id="nK8-wM-nhR">
-                            <view key="view" ambiguous="YES" id="TKg-tC-NBh">
+                            <view key="view" id="TKg-tC-NBh">
                                 <rect key="frame" x="10" y="33" width="304" height="54"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
@@ -160,6 +160,44 @@
                                             <action selector="updateKelvinSlide:" target="NzV-ef-CcW" id="X1h-Wa-Y3c"/>
                                         </connections>
                                     </slider>
+                                </subviews>
+                            </view>
+                        </tabViewItem>
+                        <tabViewItem label="Effects" identifier="" id="RlK-rG-m1K">
+                            <view key="view" ambiguous="YES" id="nH5-2k-hTf">
+                                <rect key="frame" x="10" y="33" width="304" height="54"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c14-HV-Dkk">
+                                        <rect key="frame" x="110" y="10" width="84" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Pulse" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2sx-JF-KVT">
+                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="pulseButton:" target="NzV-ef-CcW" id="pQh-Al-oA2"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aU1-9K-4KN">
+                                        <rect key="frame" x="209" y="10" width="84" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Pastels" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SYc-CS-Vbi">
+                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="pastelsButton:" target="NzV-ef-CcW" id="MRk-Ng-Qn8"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QgU-xI-Eje">
+                                        <rect key="frame" x="11" y="10" width="84" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Cycle" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8E4-4G-Kfo">
+                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="strobeButton:" target="NzV-ef-CcW" id="4DL-Qf-5PV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </view>
                         </tabViewItem>

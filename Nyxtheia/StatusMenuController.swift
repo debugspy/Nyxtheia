@@ -127,6 +127,74 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     }
     
     
+    // Next three functions look after our effects, each one self-describing
+    @IBAction func strobeButton(sender: NSButton) {
+        let all = client.allLightTarget()
+        let prevColor = all.color
+        
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            while sender.state == NSOnState{
+                for i in 0...72 {
+                    let j = Color.color(Double(i) * 5.0, saturation: 1.0)
+                    all.setColor(j, duration: 0.5)
+                    print(i)
+                    if sender.state == NSOffState{
+                        all.setColor(prevColor, duration: 0.5)
+                        break
+                    }
+                    else {
+                        sleep(1)
+                    }
+                }
+            }
+        }
+    }
+    
+    @IBAction func pulseButton(sender: NSButton) {
+        let all = client.allLightTarget()
+        let prevBrightness = all.brightness
+        
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            while sender.state == NSOnState{
+                all.setBrightness(1.0, duration: 3.0)
+                all.setBrightness(0.35, duration: 3.0)
+                if sender.state == NSOffState{
+                    all.setBrightness(prevBrightness, duration: 0.5)
+                    break
+                }
+                else {
+                    sleep(5)
+                }
+            }
+        }
+    }
+    
+    @IBAction func pastelsButton(sender: NSButton) {
+        let all = client.allLightTarget()
+        let prevColor = all.color
+        
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            while sender.state == NSOnState{
+                for i in 0...72 {
+                    let j = Color.color(Double(i) * 5.0, saturation: 0.25)
+                    all.setColor(j, duration: 0.5)
+                    print(i)
+                    if sender.state == NSOffState{
+                        all.setColor(prevColor, duration: 0.5)
+                        break
+                    }
+                    else {
+                        sleep(1)
+                    }
+                }
+            }
+        }
+    }
+    
+    
     // Check if our preferences changed and update our access token
     func preferencesDidUpdate() {
         updateToken()
