@@ -103,12 +103,12 @@
                     <font key="font" metaFont="system"/>
                     <tabViewItems>
                         <tabViewItem label="Colours" identifier="1" id="nK8-wM-nhR">
-                            <view key="view" id="TKg-tC-NBh">
-                                <rect key="frame" x="10" y="33" width="304" height="54"/>
+                            <view key="view" ambiguous="YES" id="TKg-tC-NBh">
+                                <rect key="frame" x="10" y="33" width="195" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Vh-pl-dRH">
-                                        <rect key="frame" x="16" y="32" width="65" height="19"/>
+                                        <rect key="frame" x="16" y="-22" width="65" height="19"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Hue" id="709-J6-uua">
                                             <font key="font" metaFont="systemLight" size="14"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -116,7 +116,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6En-SX-wGn">
-                                        <rect key="frame" x="16" y="5" width="74" height="19"/>
+                                        <rect key="frame" x="16" y="-49" width="74" height="19"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Saturation" id="X7d-nh-Fsb">
                                             <font key="font" metaFont="systemLight" size="14"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -124,14 +124,14 @@
                                         </textFieldCell>
                                     </textField>
                                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aP2-n7-bES">
-                                        <rect key="frame" x="94" y="32" width="195" height="21"/>
+                                        <rect key="frame" x="94" y="-22" width="195" height="21"/>
                                         <sliderCell key="cell" state="on" alignment="left" maxValue="360" doubleValue="180" tickMarkPosition="above" sliderType="linear" id="HI2-fS-YwZ" customClass="hueSlide" customModule="Nyxtheia" customModuleProvider="target"/>
                                         <connections>
                                             <action selector="updateColorSlide:" target="NzV-ef-CcW" id="ZGU-Ea-JR0"/>
                                         </connections>
                                     </slider>
                                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xwd-Fp-wco">
-                                        <rect key="frame" x="94" y="4" width="195" height="21"/>
+                                        <rect key="frame" x="94" y="-50" width="195" height="21"/>
                                         <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="pMo-MX-RU2" customClass="saturationSlide" customModule="Nyxtheia" customModuleProvider="target"/>
                                         <connections>
                                             <action selector="updateSaturationSlide:" target="NzV-ef-CcW" id="kzy-OQ-DWv"/>
@@ -164,7 +164,7 @@
                             </view>
                         </tabViewItem>
                         <tabViewItem label="Effects" identifier="" id="RlK-rG-m1K">
-                            <view key="view" ambiguous="YES" id="nH5-2k-hTf">
+                            <view key="view" id="nH5-2k-hTf">
                                 <rect key="frame" x="10" y="33" width="304" height="54"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
