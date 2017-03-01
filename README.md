@@ -1,4 +1,4 @@
-# Nyxtheia
+# Nyxtheia ![](https://github.com/jacquesCedric/Nyxtheia/blob/master/Nyxtheia/Assets.xcassets/AppIcon.appiconset/nyx32-1.png?raw=true)
 ![](https://github.com/jacquesCedric/Nyxtheia/blob/master/documentation/images/MainMenu.png?raw=true)
 
 Nyxtheia is a MacOS menubar applet that controls your LIFX bulbs. It is still in its infancy, so it only does a few simple things at the moment:
